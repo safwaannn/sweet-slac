@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sweet Slac — Luxury Skincare</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar" role="banner">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        "
+      >
+        <div class="nav-left">
+          <a class="logo" id="nav-home">
+            <div class="logo-mark">S</div>
+            <div>
+              <div style="font-weight: 800">Sweet Slac</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Luxury Skincare
+              </div>
+            </div>
+          </a>
+          <nav class="nav-links" aria-label="Main Navigation">
+            <a href="#" id="link-home">Home</a>
+            <a href="#" id="link-products">Products</a>
+            <a href="#" id="link-contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="nav-right">
+          <a href="#" class="nav-link" id="nav-signin">Sign In</a>
+          <a href="#" class="nav-link" id="nav-signup">Sign Up</a>
+          <div class="cart-wrap">
+            <button
+              class="cart-btn"
+              id="btn-cart"
+              title="Open cart"
+              aria-label="Open cart"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden
+              >
+                <path
+                  d="M3 3h2l.4 2M7 13h10l3-7H6.4"
+                  stroke="#222"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="9" cy="20" r="1.6" fill="#222"></circle>
+                <circle cx="18" cy="20" r="1.6" fill="#222"></circle>
+              </svg>
+            </button>
+            <div id="cart-badge" class="cart-badge hidden">0</div>
+          </div>
+          <a class="btn btn-ghost" id="nav-signout" style="display: none"
+            >Sign Out</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <section id="page-signin" class="page">
+        <div class="auth-wrap">
+          <div class="auth-card reveal">
+            <h2>Welcome back</h2>
+            <p class="lead">Sign in to continue to Sweet Slac</p>
+            <label for="signin-email">Email</label>
+            <input
+              id="signin-email"
+              type="email"
+              placeholder="you@domain.com"
+              autocomplete="username"
+            />
+            <label for="signin-password">Password</label>
+            <input
+              id="signin-password"
+              type="password"
+              placeholder="••••••"
+              autocomplete="current-password"
+            />
+            <button class="btn" id="btn-signin">Sign In</button>
+            <div class="auth-links">
+              <a href="#" class="muted-link" id="to-register"
+                >Don't have an account? Register</a
+              >
+              <a href="#" class="muted-link" id="to-admin-login-page"
+                >Admin Login</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-register" class="page">
+        <div class="auth-wrap">
+          <div class="auth-card reveal">
+            <h2>Create Account</h2>
+            <p class="lead">Join Sweet Slac for exclusive skincare picks</p>
+            <label for="reg-name">Full Name</label>
+            <input
+              id="reg-name"
+              type="text"
+              placeholder="Your full name"
+              autocomplete="name"
+            />
+            <label for="reg-email">Email</label>
+            <input
+              id="reg-email"
+              type="email"
+              placeholder="you@domain.com"
+              autocomplete="email"
+            />
+            <label for="reg-password">Password</label>
+            <input
+              id="reg-password"
+              type="password"
+              placeholder="Choose a strong password"
+              autocomplete="new-password"
+            />
+            <button class="btn" id="btn-register">Create Account</button>
+            <a href="#" class="muted-link" id="to-signin"
+              >Already have an account? Sign In</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="page-admin-login" class="page">
+        <div class="auth-wrap">
+          <div class="auth-card reveal">
+            <h2>Admin Access</h2>
+            <p class="lead">Enter the administrator password to continue</p>
+            <label for="admin-password">Password</label>
+            <input id="admin-password" type="password" placeholder="••••••" />
+            <button class="btn" id="btn-admin-login">Login</button>
+            <a href="#" class="muted-link" id="to-signin-from-admin"
+              >Back to User Sign In</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="page-dashboard" class="page active">
+        <div class="reveal">
+          <div class="hero" role="region" aria-label="Hero banner">
+            <div class="hero-content">
+              <h1>Elegance in Every Drop</h1>
+              <p>
+                Curated luxury formulations crafted to elevate your skin ritual.
+              </p>
+              <div class="cta-row">
+                <button class="btn" id="hero-shop">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="gap"></div>
+            <div class="slider-container reveal">
+              <div class="slider-track">
+                <div class="slide">
+                  <h3>Pure Ingredients</h3>
+                  <p>Harnessing the best from nature for visible results.</p>
+                </div>
+                <div class="slide">
+                  <h3>Cruelty-Free</h3>
+                  <p>Ethically crafted beauty, never tested on animals.</p>
+                </div>
+                <div class="slide">
+                  <h3>Dermatologist Tested</h3>
+                  <p>Safe, effective, and backed by science.</p>
+                </div>
+              </div>
+              <button class="slider-btn prev" id="slider-prev">‹</button>
+              <button class="slider-btn next" id="slider-next">›</button>
+            </div>
+          </div>
+          <div class="feature-banner reveal">
+            <div class="feature-content">
+              <h2>The Science of Radiance</h2>
+              <p>
+                Our commitment is to blend potent natural extracts with
+                cutting-edge science to create skincare that truly transforms.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="testimonials-section reveal">
+              <h2>What Our Customers Say</h2>
+              <div class="testimonial-grid">
+                <div class="testimonial-card">
+                  <p>
+                    "The Radiant Dew Serum has completely changed my skin. It's
+                    glowing, hydrated, and feels so smooth. I'm obsessed!"
+                  </p>
+                  <h4>— Jessica M.</h4>
+                </div>
+                <div class="testimonial-card">
+                  <p>
+                    "I have very sensitive skin, and the Gentle Glow Cleanser is
+                    perfect. It cleanses without stripping my skin. Highly
+                    recommended."
+                  </p>
+                  <h4>— Sarah L.</h4>
+                </div>
+                <div class="testimonial-card">
+                  <p>
+                    "Sweet Slac is luxury in a bottle. Every product feels so
+                    special and has made a visible difference. Worth every
+                    penny."
+                  </p>
+                  <h4>— Emily R.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-products" class="page">
+        <div class="container reveal">
+          <div class="gap"></div>
+          <div class="concern-selector-section">
+            <h2>Find Your Perfect Solution</h2>
+            <p class="muted center">
+              Select a concern to discover curated products for your skin.
+            </p>
+            <div class="concern-grid">
+              <a
+                href="#"
+                class="concern-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1596598154634-9cf11593e112?auto=format&fit=crop&w=600&q=60');
+                "
+              >
+                <div class="concern-overlay">
+                  <h4>Brightening & Tone</h4>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="concern-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1620916566398-39f168a57e20?auto=format&fit=crop&w=600&q=60');
+                "
+              >
+                <div class="concern-overlay">
+                  <h4>Acne & Blemishes</h4>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="concern-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1605651202772-137b2451f7b5?auto=format&fit=crop&w=600&q=60');
+                "
+              >
+                <div class="concern-overlay">
+                  <h4>Fine Lines & Aging</h4>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="concern-card"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1600192850313-9134a65d75d4?auto=format&fit=crop&w=600&q=60');
+                "
+              >
+                <div class="concern-overlay">
+                  <h4>Hydration & Dryness</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="gap"></div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 12px;
+              border-top: 1px solid #eee;
+              padding-top: 24px;
+            "
+          >
+            <div>
+              <h3 style="margin: 0">Our Collection</h3>
+              <div style="color: var(--muted); font-size: 14px">
+                Luxurious essentials for every skin type
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <label style="color: var(--muted); font-size: 14px">Sort</label>
+              <select
+                id="sort-select"
+                style="padding: 8px; border-radius: 8px; border: 1px solid #eee"
+              >
+                <option value="default">Featured</option>
+                <option value="low">Price: Low → High</option>
+                <option value="high">Price: High → Low</option>
+              </select>
+            </div>
+          </div>
+          <div
+            id="product-grid"
+            class="products reveal"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+
+      <section id="page-admin" class="page">
+        <div class="container" style="margin-top: 18px">
+          <h2>Admin Panel</h2>
+          <p class="muted">Manage products and view customer messages.</p>
+
+          <div class="admin-section">
+            <h3>Add New Product</h3>
+            <div class="admin-wrap">
+              <label>Product Name</label>
+              <input id="admin-name" type="text" placeholder="Serum Luxe" />
+              <label>Image URL</label>
+              <input id="admin-image" type="url" placeholder="https://..." />
+              <label>Price (INR)</label>
+              <input id="admin-price" type="number" placeholder="1299" />
+              <div style="margin-top: 12px; display: flex; gap: 8px">
+                <button class="btn" id="btn-add-product">Add Product</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-section">
+            <h3>Manage Existing Products</h3>
+            <div id="admin-products-list" class="admin-list"></div>
+          </div>
+
+          <div class="admin-section">
+            <h3>Customer Messages</h3>
+            <div id="admin-messages-list" class="admin-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-contact" class="page">
+        <div class="container reveal">
+          <h2>Contact Us</h2>
+          <p class="lead">
+            We'd love to hear from you. Reach out with any questions or
+            feedback.
+          </p>
+          <div class="contact-form">
+            <label for="contact-name">Full Name</label>
+            <input id="contact-name" type="text" placeholder="Your Name" />
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              type="email"
+              placeholder="you@domain.com"
+            />
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              rows="5"
+              placeholder="Your message..."
+            ></textarea>
+            <button class="btn" id="btn-contact-submit">Send Message</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <h3 style="margin: 0">Your Cart</h3>
+        <button class="icon-btn" id="close-cart" aria-label="Close cart">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              stroke="#222"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="cart-items"
+        style="overflow: auto; max-height: 66vh; padding-right: 6px"
+      ></div>
+      <div id="cart-empty" class="empty-msg">
+        Your cart is empty. Add a product to get started.
+      </div>
+      <div class="subtotal">
+        <div>
+          <div style="font-size: 13px; color: var(--muted)">Subtotal</div>
+          <div style="font-weight: 700; font-size: 18px" id="cart-subtotal">
+            ₹0
+          </div>
+        </div>
+        <div>
+          <button class="btn" id="btn-checkout">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>Sweet Slac Skincare</h3>
+          <p>
+            Elegance in every drop. Clean, conscious beauty for radiant skin.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#" class="footer-link-products">All Products</a></li>
+            <li><a href="#">Serums</a></li>
+            <li><a href="#">Moisturizers</a></li>
+            <li><a href="#">Cleansers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#" class="footer-link-contact">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Join our list for updates and exclusive offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2025 Sweet Slac Skincare. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
