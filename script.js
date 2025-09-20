@@ -93,12 +93,6 @@ function loadState() {
       price: 1199,
       img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=60",
     },
-    {
-      id: "a4",
-      name: "Platinum Eye Serum",
-      price: 1999,
-      img: "https://images.unsplash.com/photo-1617804439343-1b9a84a7a0a4?w=600&auto=format&fit=crop&q=60",
-    },
   ];
   const productsFromStorage = JSON.parse(
     localStorage.getItem("sweetSlacProducts")
